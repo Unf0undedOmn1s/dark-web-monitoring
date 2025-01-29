@@ -21,6 +21,7 @@ A powerful **Threat Intelligence** tool designed to **monitor the dark web** for
 ```bash
 git clone https://github.com/yourusername/darkweb-monitoring.git
 cd darkweb-monitoring
+```
 
 ### 2️⃣ Set Up a Virtual Environment
 ```bash
@@ -28,3 +29,4 @@ python -m venv venv
 source venv/bin/activate   # On Linux/macOS
 venv\Scripts\activate      # On Windows
 pip install -r requirements.txt
+```
