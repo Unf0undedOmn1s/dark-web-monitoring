@@ -36,3 +36,23 @@ pip install -r requirements.txt
 Edit alerts/alerts.py to add your own keywords:
 KEYWORDS = ["leaked password", "stolen data", "breached database"]
 ```
+
+### 4️⃣ Run the Tool
+```bash
+python main.py / python3 main.py
+```
+
+### 📩 Email Alerts
+```bash
+Set up your email notifier in notifier.py and configure SMTP credentials:
+EMAIL_USER = "your_email@gmail.com"
+EMAIL_PASS = "your_app_password"
+```
+
+💡 Why Use This Tool?
+🔹 Stay ahead of cyber threats – Monitor the dark web for potential risks
+🔹 Improve threat intelligence – Gather real-time OSINT data
+🔹 Automate security alerts – Receive instant notifications on suspicious findings
+
+💀 "Your Data is Valuable – Keep It Secure." 💀
+🚀 Perfect for cybersecurity enthusiasts, SOC analysts, and OSINT researchers!
