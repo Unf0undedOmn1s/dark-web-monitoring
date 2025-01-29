@@ -30,3 +30,9 @@ source venv/bin/activate   # On Linux/macOS
 venv\Scripts\activate      # On Windows
 pip install -r requirements.txt
 ```
+
+### 3️⃣ Configure Keywords
+```bash
+Edit alerts/alerts.py to add your own keywords:
+KEYWORDS = ["leaked password", "stolen data", "breached database"]
+```
