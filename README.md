@@ -2,20 +2,20 @@
 
 A powerful **Threat Intelligence** tool designed to **monitor the dark web** for leaked credentials, stolen data, and cyber threats. This project automates **scraping**, **keyword detection**, and **email alerts** to notify users of potential security risks.  
 
-## 🚀 Features  
-✅ **Dark Web Scraping** – Extracts data from hidden marketplaces & forums  
-✅ **Keyword-Based Alerts** – Detects sensitive terms like "leaked passwords" or "breached data"  
-✅ **SQLite Database** – Stores findings for later analysis  
-✅ **Automated Email Notifications** – Sends alerts when threats are detected  
-✅ **Modular & Scalable** – Easily customizable for different threat intelligence needs  
+##  Features  
+**Dark Web Scraping** – Extracts data from hidden marketplaces & forums  
+ **Keyword-Based Alerts** – Detects sensitive terms like "leaked passwords" or "breached data"  
+ **SQLite Database** – Stores findings for later analysis  
+ **Automated Email Notifications** – Sends alerts when threats are detected  
+ **Modular & Scalable** – Easily customizable for different threat intelligence needs  
 
-## 🛠️ Technologies Used  
+##  Technologies Used  
 - **Python** (Requests, BeautifulSoup, SQLite)  
 - **Web Scraping** (OSINT Techniques)  
 - **Threat Intelligence Automation**  
 - **Email Alerts** (Yagmail / SMTP)  
 
-## 🔧 Installation & Usage  
+##  Installation & Usage  
 
 ### 1️⃣ Clone the Repository  
 ```bash
@@ -42,19 +42,12 @@ KEYWORDS = ["leaked password", "stolen data", "breached database"]
 python main.py / python3 main.py
 ```
 
-### 📩 Email Alerts
-```bash
-Set up your email notifier in notifier.py and configure SMTP credentials:
-EMAIL_USER = "your_email@gmail.com"
-EMAIL_PASS = "your_app_password"
-```
-
 💡 Why Use This Tool?
 ```bash
 🔹 Stay ahead of cyber threats – Monitor the dark web for potential risks
 🔹 Improve threat intelligence – Gather real-time OSINT data
 🔹 Automate security alerts – Receive instant notifications on suspicious findings
 
-💀 "Your Data is Valuable – Keep It Secure." 💀
-🚀 Perfect for cybersecurity enthusiasts, SOC analysts, and OSINT researchers!
+ "Your Data is Valuable – Keep It Secure." 💀
+ Perfect for cybersecurity enthusiasts, SOC analysts, and OSINT researchers!
 ```
