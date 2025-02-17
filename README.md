@@ -50,12 +50,12 @@ python main.py / python3 main.py
 ### Disclaimer
 This tool is intended for ethical cybersecurity research and awareness. Misuse for illegal purposes is strictly prohibited.
 
-### 💡 Why Use This Tool?
-
+💡 Why Use This Tool?
+```bash
 🔹 Stay ahead of cyber threats – Monitor the dark web for potential risks
 🔹 Improve threat intelligence – Gather real-time OSINT data
 🔹 Automate security alerts – Receive instant notifications on suspicious findings
 
  "Your Data is Valuable – Keep It Secure." 💀
  Perfect for cybersecurity enthusiasts, SOC analysts, and OSINT researchers!
-
+```
