@@ -1,0 +1,17 @@
+# Dark Web Scraper (`main.py`)
+
+This script scans dark web `.onion` sites, extracts relevant information, and detects **cybersecurity-related keywords**. The data is stored in a local SQLite database.
+
+## Features
+- **Tor Integration**: Uses `socks5h://127.0.0.1:9050` to route requests through the Tor network.
+- **Web Scraping**: Extracts the **title** and **description** from `.onion` websites.
+- **Keyword Matching**: Searches for **blackhat and cybersecurity-related terms** (e.g., "stolen credentials", "ransomware", "DDoS for hire").
+- **Database Storage**: Saves results (URL, title, description, matched keywords, timestamp).
+- **Automated Scanning**: Iterates over a predefined list of **dark web URLs**.
+
+## Setup & Installation
+
+### Install Dependencies
+Ensure you have Python and the required libraries installed:
+```bash
+pip install requests beautifulsoup4
