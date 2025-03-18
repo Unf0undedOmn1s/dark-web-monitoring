@@ -52,4 +52,44 @@ Purpose: Ensures main.py only runs when executed directly.
 Calls run_scan() to start scanning.
 Calls display_results() to show past results.
 Matter (if __name__ == "__main__":): Prevents automatic execution when main.py is imported into another script.
+---------------------------------------------------------------------------------------------------------------
+Breakdown of db_manager.py (Dark-Web Monitoring/database/db_manager.py)
 
+1. Importing Required Libraries.
+- sqlite3: Allows interaction with a lightweight, file-based SQLite database.
+- os: Helps manage file paths dynamically, ensuring compatibility across different operating systems.
+
+2. Defining Database Constants.
+Purpose: Defines the database file name.
+Uses os.path.join() to construct a platform-independent path to the database.
+Matter (os.path.join()): Ensures the database is always located in the same directory as db_manager.py.
+Works on both Windows and Linux.
+
+3. Creating Database (If it does not exist).
+Purpose: Checks if the database file already exists.
+If not found, it creates a new database and calls create_table().
+Matter: Prevents overwriting an existing database each time the script runs.
+
+4. Creating the results Table.
+Purpose: Creates a table named results with five columns:
+a) id → Auto-incremented primary key.
+b) title → Stores the title of the webpage.
+c) description → Stores the meta description.
+d) keywords → Stores matched keywords.
+e) timestamp → Stores the date and time of the scan.
+Matter (AUTOINCREMENT for id): Ensures each record gets a unique identifier, making data retrieval easier.
+
+5. Inserting Data into the Database.
+Purpose: Inserts a new row into the results table.
+Uses parameterized queries (?) to prevent SQL injection.
+Why Use ? Instead of Concatenation: Prevents SQL injection attacks.
+Ensures safe handling of user input.
+
+6. Retrieving Data from the Database.
+Purpose: Fetches all stored records from the database.
+Prints them in a readable format.
+Why Use fetchall(): Retrieves all rows at once, making it easier to process the results.
+---------------------------------------------------------------------------------------------------------------
+Breakdown of scraper.py (Dark-Web Monitoring/crawler/scraper.py)
+
+1. 
