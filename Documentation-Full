@@ -1,17 +1,55 @@
-# Dark Web Scraper (`main.py`)
+Dark-Web Monitoring (main.py)
+Breakdown of main.py:
 
-This script scans dark web `.onion` sites, extracts relevant information, and detects **cybersecurity-related keywords**. The data is stored in a local SQLite database.
+1. Imports Required Libraries:
+- requests: Sends HTTP requests to the .onion sites through the Tor network.
+- BeautifulSoupParses HTML to extract relevant titles and meta descriptions.
+- datetime: Logs the timestamp of each scan.
+- database.db_manager: Handles SQLite database operations (creating tables, inserting and retreiving data).
 
-## Features
-- **Tor Integration**: Uses `socks5h://127.0.0.1:9050` to route requests through the Tor network.
-- **Web Scraping**: Extracts the **title** and **description** from `.onion` websites.
-- **Keyword Matching**: Searches for **blackhat and cybersecurity-related terms** (e.g., "stolen credentials", "ransomware", "DDoS for hire").
-- **Database Storage**: Saves results (URL, title, description, matched keywords, timestamp).
-- **Automated Scanning**: Iterates over a predefined list of **dark web URLs**.
+2. Defining the List of Target Dark-Web URLs.
+Purpose: These .onion links are hidden services on the dark web that the script will scan.
+Matter: .onion domains are not indexed by standard search engines like Google, or Firefox, requiring Tor routing.
 
-## Setup & Installation
+3. Defining Keywords for Threat Detection.
+Purpose: The script will search for the words inserted in the script in the website's title and description.
+Matter: Helps in automatically detecting potentially malicious sites without manual intervation.
 
-### Install Dependencies
-Ensure you have Python and the required libraries installed:
-```bash
-pip install requests beautifulsoup4
+4. Function to scrape Dark-Web Pages scrape_url(url).
+Purpose: Uses requests.get() to send a GET request to each .onion site.
+Uses a Tor SOCKS5 proxy (127.0.0.1:9050) to route traffic through the Tor network.
+Calls raise_for_status() to handle HTTP errors.
+
+5. Extracting Webpage Data.
+Purpose: Parses HTML content of the page.
+Extracts the title (<title> tag).
+Extracts the meta descrption (<meta name = "description"> tag).
+
+Why use BeautifulSoup?
+Dark web sites may lack proper structure, so BeautifulSoup helps extract meaningful content.
+
+6. Checking for Suspicious Keywords.
+Purpose: Converts both title and description to lowercase.
+Searches for matching keywords from KEYWORDS list.
+Matter: Detects blackhat activities without manually reviewing each site.
+
+7. Storing Data in the SQLite Database.
+Purpose: Converts the current timestamp into a string.
+Calls insert_data() to store the extracted information in an SQLite database.
+
+8. Handling Connection Errors.
+Purpose: Catches connection issues, timeouts, or Tor misconfigurations.
+Matter: Dark web sites are unstable and often go offline, so error handling is critical.
+
+9. Running the Scan.
+Purpose: Ensures the database exists (create_database()).
+Iterates through all .onion URLs.
+Calls scrape_url(url) to scan each site.
+Matter: Allows batch processing of multiple .onion links.
+
+10. Running the Script.
+Purpose: Ensures main.py only runs when executed directly.
+Calls run_scan() to start scanning.
+Calls display_results() to show past results.
+Matter (if __name__ == "__main__":): Prevents automatic execution when main.py is imported into another script.
+
