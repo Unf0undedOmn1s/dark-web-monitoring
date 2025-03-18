@@ -1,5 +1,0 @@
-25/01/2025: Project Directory created, scraper.py is created with its features.
-27/01/2025: Requirements text file is completed, Database file is completed. Almost completed project, main.py doesnt run due to some error (alerts.py)
-29/01/2025: Completed project, need to know if Yagmail is working (Possible at the moment)
-Created GitHub description.
-12/02/2025: Made Telegram Bot for alerts, intergrated it to the code as well. API works but yet no message.
