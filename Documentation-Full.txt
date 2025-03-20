@@ -124,3 +124,46 @@ Why Store the Results: Helps in dark web monitoring.
 Saves valuable OSINT (Open Source Intelligence) data.
 ---------------------------------------------------------------------------------------------------------------
 Breakdown of alerts.py (Dark-Web Monitoring/alerts/alerts.py)
+1. Importing Required Libraries.
+- logging: Used to send alerts when suspicious words were found.
+- sqlite3: Connects toa SQLite database to store and retrieve data.
+
+2. Storing Results in the Database.
+What It does: Connects to the darkweb_results.db SQLite database.
+Inserts a new title, description and keyword into the alerts table.
+Saves the data and closes the connection.
+Matter: Keeping a record of suspicious content for further investigation.
+
+3. Scanning for Keywords and Storing Matches.
+What It Does: Iterates through stored data (data parameter).
+Checks if any keyword is present in the title or description.
+If a match is found, it prints the keyword and stores the result in the database.
+Matter: Tracking specific dark web abilities and store alerts for further review.
+
+4. Scanning for Keywords and Sending Notifications.
+What It Does: Similar to scan_keywords_and_store(), but instead, it logs a notification.
+Matter: To alert administrators when a keyword is found, allowing them to take immediate action.
+---------------------------------------------------------------------------------------------------------------
+Breakdown of logger.py (Dark-Web Monitoring/alerts/logger.py)
+1. Importing Required Libraries.
+- logging:mhandles event logging.
+
+2. Configuring the Logger:
+What It Does: Saves logs to a file called alerts.log.
+Logs everything at level INFO of higher (INFO, WARNING, ERROR).
+Adds timestamps to each log entry.
+Matter: Recording activity to debug issues.
+
+3. Creating the Logger Instance.
+What It Does: Initializes a logger instance that will be used in other scripts.
+
+4. Logging Events.
+What It Does: Logs normal events at the INFO level.
+Example Usage: log_event("Dark web scan completed successfully.")
+
+5. Logging Errors.
+What It Does: Logs errors at the ERROR level.
+Example Usage: log_error("Failed to connect to the Tor proxy.")
+
+Final Thoughts: This project provides a structured and automated approach to monitoring dark web activity.
+By integrating web scraping, database storage, keyword detection, and logging, it enables analysts to efficiently track and respond to potential threats.
