@@ -47,8 +47,14 @@ python main.py / python3 main.py
 ```
 
 ### Disclaimer
-This tool is intended for ethical cybersecurity research and awareness. Misuse for illegal purposes is strictly prohibited.
-
+⚠ Disclaimer ⚠
+This project is intended for educational and research purposes only. The developer does not encourage, promote, or support any illegal activities on the Dark Web.
+By using this project, you agree that:
+You are responsible for your own actions and how you use this tool.
+The project is not designed for illicit activities, and any misuse is strictly your responsibility.
+Accessing certain websites on the Dark Web may be illegal in your country. Always ensure that you comply with local laws and regulations.
+The Dark Web contains dangerous and malicious content. Use extreme caution to avoid phishing, malware, scams, and legal consequences.
+The developer assumes no liability for any damages, legal issues, or consequences that may arise from the use of this project.
 💡 Why Use This Tool?
 ```bash
 🔹 Stay ahead of cyber threats – Monitor the dark web for potential risks
