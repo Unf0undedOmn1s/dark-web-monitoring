@@ -1,4 +1,4 @@
-# 🔍 Dark Web Monitoring Tool  
+# Dark Web Monitoring
 
 A **Threat Intelligence** tool designed to **monitor the dark web** for leaked credentials, stolen data, and cyber threats. This project automates **scraping**, **keyword detection**, and **email alerts** to notify users of potential security risks.  
 
