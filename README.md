@@ -46,8 +46,6 @@ Ensure you have Tor installed and running before executing the script.
 python main.py / python3 main.py
 ```
 
-### Disclaimer
-⚠ Disclaimer: This project is intended for educational and research purposes only. The developer does not encourage, promote, or support any illegal activities on the Dark Web. By using this project, you acknowledge that you are solely responsible for your actions and how you use this tool. It is not designed for illicit activities, and any misuse is entirely your responsibility. Accessing certain websites on the Dark Web may be illegal in your country, so always ensure you comply with local laws and regulations. Additionally, the Dark Web contains dangerous and malicious content, including phishing, malware, and scams, which can lead to severe legal and security risks. The developer assumes no liability for any damages, legal issues, or consequences resulting from the use of this project. Use at your own risk, stay safe, and act responsibly. 🚨
 💡 Why Use This Tool?
 ```bash
 🔹 Stay ahead of cyber threats – Monitor the dark web for potential risks
@@ -57,3 +55,5 @@ python main.py / python3 main.py
 "Your Data is Valuable – Keep It Secure." 💀
  Perfect for cybersecurity enthusiasts, SOC analysts, and OSINT researchers!
 ```
+### Disclaimer
+⚠ Disclaimer: This project is intended for educational and research purposes only. The developer does not encourage, promote, or support any illegal activities on the Dark Web. By using this project, you acknowledge that you are solely responsible for your actions and how you use this tool. It is not designed for illicit activities, and any misuse is entirely your responsibility. Accessing certain websites on the Dark Web may be illegal in your country, so always ensure you comply with local laws and regulations. Additionally, the Dark Web contains dangerous and malicious content, including phishing, malware, and scams, which can lead to severe legal and security risks. The developer assumes no liability for any damages, legal issues, or consequences resulting from the use of this project. Use at your own risk, stay safe, and act responsibly. 🚨
