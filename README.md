@@ -5,8 +5,7 @@ A **Threat Intelligence** tool designed to **monitor the dark web** for leaked c
 ##  Features  
 **Dark Web Scraping** – Extracts data from hidden marketplaces & forums  
  **Keyword-Based Alerts** – Detects sensitive terms like "leaked passwords" or "breached data"  
- **SQLite Database** – Stores findings for later analysis  
- **Automated Email Notifications** – Sends alerts when threats are detected  
+ **SQLite Database** – Stores findings for later analysis 
  **Modular & Scalable** – Easily customizable for different threat intelligence needs  
 
 ##  Technologies Used  
