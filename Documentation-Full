@@ -92,4 +92,35 @@ Why Use fetchall(): Retrieves all rows at once, making it easier to process the 
 ---------------------------------------------------------------------------------------------------------------
 Breakdown of scraper.py (Dark-Web Monitoring/crawler/scraper.py)
 
-1. 
+1. Importing Required Libraries.
+- requests: Fetches .onion pages over the Tor Network
+- BeautifulSoup: Parses HTML to extract relevant titles and meta descriptions.
+- store_result (from alerts.py): Saves the extracted data for further processing.
+
+2. Fetching Onion Pages via Tor.
+Uses Tor's SOCKS5 proxy (127.0.0.1:9050) to fetch hidden services (.onion sites).
+Sets a timeout of 10 seconds to prevent hanging requests.
+Handles errors, printing a message if fetching fails.
+Why Use a Proxy: .onion websites cannot be accessed directly via a regular internet connection.
+Tor anonymizes requests, making them untraceable.
+
+3. Extracting Titles from the Page.
+What it does: Parses HTML content using BeautifulSoup.
+Finds all <h1> elements and extracts their text.
+Why Extract Titles: Main headings (<h1>) summarize the page's purpose.
+Useful for categorizing and indexing dark web content.
+
+4. Extracting Links from the Page.
+What It Does: Finds all <a> tags (hyperlinks) in the page.
+Filters only valid HTTP/HTTPS links (ignores relative paths).
+Why Extract Links: Maps connections between dark web sites.
+Finds related hidden services.
+
+5. Scraping and Storing Results.
+What It Does: Fetches the .onion page.
+Extracts titles and links.
+Stores them using store_result() from alerts.py.
+Why Store the Results: Helps in dark web monitoring.
+Saves valuable OSINT (Open Source Intelligence) data.
+---------------------------------------------------------------------------------------------------------------
+Breakdown of alerts.py (Dark-Web Monitoring/alerts/alerts.py)
