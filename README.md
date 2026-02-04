@@ -52,7 +52,7 @@ Why Use This Tool?
 🔹 Improve threat intelligence – Gather real-time OSINT data
 🔹 Automate security alerts – Receive instant notifications on suspicious findings
 
-"Your Data is Valuable – Keep It Secure." 💀
+"Your Data is Valuable – Keep It Secure."
  Perfect for cybersecurity enthusiasts, SOC analysts, and OSINT researchers!
 ```
 ### Disclaimer
